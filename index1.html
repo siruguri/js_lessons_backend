@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
+  
 <head>
     <title>Tic-Tac-Toe</title>
+  <script src='http://code.jquery.com/jquery-2.2.2.min.js'></script>
   
   <script>
  	function isInWord(word, letter) {
@@ -11,6 +13,21 @@
        return false;
      }
    }
+   
+    $(document).ready(function() {
+      $('#submit-answer').click(function() {
+        answer = 'envelope';
+
+        check = isInWord(answer $('#guess').val());
+        answer_elt = $('#current_answer');
+
+        if(check === true) {
+          answer_elt.html("That's in there.");
+        } else {
+          answer_elt.html("That's not in there.");
+        }
+      });
+    });
   </script>
 </head>
 <body>
