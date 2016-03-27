@@ -18,7 +18,7 @@
       $('#submit-answer').click(function() {
         answer = 'envelope';
 
-        check = isInWord(answer $('#guess').val());
+        check = isInWord(answer, $('#guess').val());
         answer_elt = $('#current_answer');
 
         if(check === true) {
@@ -42,6 +42,10 @@
 
   <input type=text id='guess'>
   <input type=submit id='submit-answer' value='Guess!'> 
- 
+  
+  <p>
+    Current Answer:
+  <div id='current_answer'></div>
+  
 </body>
 </html>
