@@ -40,8 +40,10 @@
     Guess a letter
   </p>
 
-  <input type=text id='guess'>
-  <input type=submit id='submit-answer' value='Guess!'> 
+  <form action='/check_word.php' method=post>  
+    <input type=text id='guess' name=guess>
+    <input type=submit id='submit-answer' value='Guess!'> 
+  </form>
   
   <p>
     Current Answer:
