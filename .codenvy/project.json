@@ -1,1 +1,1 @@
-{"mixinTypes":["factory"],"builders":{"configs":{}},"runners":{"configs":{"system:/javascript/web/simple":{"ram":1000,"variables":{},"options":{}}},"default":"system:/javascript/web/simple"},"description":"Hangman Game in Javascript","type":"blank","attributes":{"sourceFactoryId":[]}}
+{"mixinTypes":["factory"],"builders":{"configs":{}},"runners":{"configs":{"system:/javascript/web/simple":{"ram":1000,"variables":{},"options":{}}},"default":"system:/php/web/php56_apache2"},"description":"Hangman Game in Javascript","type":"blank","attributes":{}}

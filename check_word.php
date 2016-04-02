@@ -1,7 +1,11 @@
 <?php
+	$guess = $_POST['letter'];
+   if(stristr("envelope", $guess) != false) {
+     $response = 'yes';
+   } else {
+     $response = 'no';
+   }
 
-echo time();
-echo $_POST['guess']; 
-
+   echo json_encode(array("response" => $response));
 ?>
   

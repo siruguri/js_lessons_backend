@@ -13,19 +13,25 @@
        return false;
      }
    }
-   
+       
     $(document).ready(function() {
       $('#submit-answer').click(function() {
-        answer = 'envelope';
-
-        check = isInWord(answer, $('#guess').val());
-        answer_elt = $('#current_answer');
-
-        if(check === true) {
-          answer_elt.html("That's in there.");
-        } else {
-          answer_elt.html("That's not in there.");
-        }
+        $.ajax({ 
+          "url" : '/check_word.php',
+          "data" : {
+            "letter" : $('#guess').val()
+          },
+          "method" : "post",
+          "success" : function(returned_data) {
+            var json_str;
+            json_str = JSON.parse(returned_data);
+            if(json_str['response'] == "yes") {
+              alert('It is there');
+            } else {
+              alert('It is not there');
+            }
+          }
+        });
       });
     });
   </script>
